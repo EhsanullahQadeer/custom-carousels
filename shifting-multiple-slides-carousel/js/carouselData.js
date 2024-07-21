@@ -1,0 +1,16 @@
+let currentIndex = 0;
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+let slideWidth = 0;
+let visibleSlides = 0;
+let totalSlideSets = 0;
+const caruoselProducts =  products.slice(0, 15);
+let slidesLength = caruoselProducts.length;
+const carouselContainer = document.querySelector(".carousel");
+const slideContainer = document.querySelector(".slide-container");
+const dotNavigation = document.querySelector(".dot-navigation");
+const leftArrow = document.querySelector("#left-arrow");
+const rightArrow = document.querySelector("#right-arrow");

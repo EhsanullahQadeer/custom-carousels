@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/boilerplate-styles.css" />
+    <link rel="stylesheet" href="./css/products.css" />
+  </head>
+  <body>
+    
+    <div class="products-page-wrapper">
+        <div class="carousel-wrap">
+            <div class="carousel">
+              <div class="slide-container">
+                <!-- Slides will be dynamically added here -->
+              </div>
+            </div>
+           
+  
+            <div class="dot-navigation">
+              <!-- Dots will be dynamically added here -->
+            </div>
+          </div>
+          <div class="products-wrapper">
+      <div class="filter-sidebar">
+        <div class="filter">
+          <!--modal header for small screen -->
+          <div class="modal-header">
+            <strong>Comprar por</strong>
+          </div>
+          <div class="filter-content">
+            <!-- Category Filter -->
+            <div class="filter-options-item">
+              <div
+                class="filter-options-item allow"
+                data-role="collapsible"
+                data-collapsible="true"
+              >
+                <div class="filter-options-title">
+                  <h2>Categoría</h2>
+                </div>
+                <div class="filter-options-content" id="categoryFilter">
+                  <!-- Categories checkboxes will be dynamically inserted here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Brand Filter -->
+            <div class="filter-options-item brand-wrap">
+              <div
+                class="filter-options-item allow"
+                data-role="collapsible"
+                data-collapsible="true"
+              >
+                <div class="filter-options-title">
+                  <h2>Marca</h2>
+                </div>
+                <div class="filter-options-content" id="brandFilter">
+                  <!-- Brands checkboxes will be dynamically inserted here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-options-item price-wrap">
+              <div
+                class="filter-options-item allow"
+                data-role="collapsible"
+                data-collapsible="true"
+              >
+                <div class="filter-options-title">
+                  <h2>Precio</h2>
+                </div>
+                <div class="filter-options-content" id="priceFilter">
+                  <div id="price-selection-wrap"></div>
+                  <form id="priceFilterForm">
+                    <div
+                      class="amshopby-fromto-wrap am-filter-items-price"
+                      data-am-js="fromto-widget"
+                    >
+                      <input
+                        type="hidden"
+                        data-amshopby-fromto="value"
+                        data-digits-after-dot="2"
+                        name="priceRange"
+                      />
+                      <div class="amshopby_currency_rate">
+                        <div class="amshopby-input-wrapper">
+                          <input
+                            class="am-filter-price -from input-text"
+                            data-amshopby-fromto="from"
+                            data-validate-data="{'validate-number':true}"
+                            type="number"
+                            aria-label="Desde"
+                            placeholder="Desde"
+                          />
+                          <span class="amshopby-currency">S/ </span>
+                        </div>
+                        <span class="delimiter">-</span>
+                        <div class="amshopby-input-wrapper">
+                          <input
+                            class="am-filter-price -to input-text"
+                            data-amshopby-fromto="to"
+                            data-validate-data="{'validate-number':true}"
+                            type="number"
+                            aria-label="Hasta"
+                            placeholder="Hasta"
+                          />
+                        </div>
+                      </div>
+
+                      <button
+                        class="am-filter-go"
+                        title="Aplicar filtro"
+                        data-amshopby-fromto="go"
+                      >
+                        Aplicar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="layered-filter-block">
+          <div class="filter-title">
+            <strong></strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-wrap">
+        <div class="toolbar-products">
+          <div>
+            <p class="toolbar-amount" id="toolbar-amount">
+              Resultados (<span class="toolbar-number"></span>)
+            </p>
+          </div>
+          <!-- pagination -->
+          <div class="pagination"></div>
+        </div>
+        <!-- products -->
+        <div class="products-list"></div>
+
+        <div class="toolbar-products">
+          <div>
+            <p class="toolbar-amount" id="toolbar-amount">
+              Resultados (<span class="toolbar-number"></span>)
+            </p>
+          </div>
+          <!-- pagination -->
+          <div class="pagination"></div>
+        </div>
+      </div>
+      
+            
+    </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/displayProducts.js"></script>
+    <script src="./js/pagination.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/carousel.js"></script>
+  </body>
+</html>
